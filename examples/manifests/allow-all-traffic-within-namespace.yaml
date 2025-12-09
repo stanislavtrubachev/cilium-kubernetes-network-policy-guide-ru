@@ -1,0 +1,15 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-all-traffic-within-namespace
+  namespace: microservices-demo
+spec:
+  endpointSelector: {}
+
+  ingress:
+    - fromEndpoints:
+        - {}
+
+  egress:
+    - toEndpoints:
+        - {}
